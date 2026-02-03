@@ -8,16 +8,40 @@ import Link from "next/link";
 
 const PROJECTS_DATA = [
     {
+        title: "URL Shortener",
+        description: "Designed and developed a URL shortening service with custom alias generation.",
+        tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker", "HTMX"],
+        link: "https://piyus.site" // Placeholder
+    },
+    {
+        title: "Upload/Download File using ByteStream",
+        description: "Upload/Download file using ByteStream",
+        tech_stack: ["Python", "FastAPI", "Blob Storage", "Docker"],
+        link: "https://archit-g.vercel.app/docs" // Placeholder
+    },
+    {
+        title: "Group Chat",
+        description: "Designed and developed a group chat application with real-time messaging.",
+        tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker"],
+        link: "https://pi-c.vercel.app/" // Placeholder
+    },
+    {
+        title: "Gemini Wrapper",
+        description: "A wrapper around Gemini API to provide a simple and easy-to-use interface to chat with LLM in corporate environment.",
+        tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker", "HTMX"],
+        link: "https://pitools.vercel.app" // Placeholder
+    },
+    {
         title: "Facial Recognition Attendance System",
         description: "Mobile-based attendance solution with facial recognition and GPS tracking using DLib and FastAPI.",
         tech_stack: ["Python", "FastAPI", ".NET", "Angular", "Docker"],
-        link: "#" // Placeholder
+        link: "https://mlservices.vultech.in/docs" // Placeholder
     },
     {
         title: "Early Stage Diabetes Risk Prediction",
         description: "Machine Learning model to predict early-stage diabetes symptoms using classification algorithms.",
         tech_stack: ["Python", "Scikit-Learn", "TensorFlow", "ML"],
-        link: "#" // Placeholder
+        link: "https://github.com/piyush-chandra/Early-stage-diabetes-risk-prediction" // Placeholder
     }
 ];
 
@@ -27,7 +51,7 @@ export function Projects() {
             {/* Heading removed for page-based layout */}
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl">
                 {PROJECTS_DATA.map((project, index) => (
                     <motion.div
                         key={index}

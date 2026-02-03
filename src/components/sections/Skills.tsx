@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
 const SKILLS_DATA = {
-    "Languages": ["Java", "Python", "JavaScript", "SQL", "MongoDB", "C/C++", "HTML/CSS"],
-    "Frameworks & Tools": ["Spring Boot", "FastAPI", "Angular", "JUnit", "Maven", "Docker", "Kafka", "Git", "ELK", "AWS", "IBM MQ", "SVN"],
+    "Languages": ["Java", "Python", "JavaScript", "SQL"],
+    "Frameworks & Tools": ["Spring Boot", "FastAPI", "JUnit", "Maven", "Docker", "Kafka", "Git", "ELK", "AWS", "IBM MQ", "SVN"],
     "Methodologies": ["Agile", "Microservices", "CI/CD", "TDD"]
 };
 

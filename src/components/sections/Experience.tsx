@@ -9,6 +9,7 @@ const EXPERIENCE_DATA = [
         role: "Technical Analyst",
         period: "Dec 2024 – Present",
         achievements: [
+            "Integrated Core Banking System with Treasury Kondor for deal utilisation across Trade Finance modules.",
             "Developed Excel-based bulk upload for AD2 partners, reducing TAT by 80%.",
             "Collaborated on MT to MX SWIFT migration project.",
             "Integrated APIs for New-To-Bank customer outward remittance.",

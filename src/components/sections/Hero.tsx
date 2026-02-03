@@ -31,12 +31,12 @@ export function Hero() {
                 className="space-y-4"
             >
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white/95">
-                    hi, i&#39;m piyush kumar
+                    hi, i&#39;m piyush
                 </h1>
                 <p className="text-lg text-neutral-400 max-w-[600px] leading-relaxed">
-                    Technical Analyst & Senior Software Engineer specialized in Fintech and
-                    automated banking solutions. Building scalable systems with Spring Boot,
-                    Python, and Modern Web Tech.
+                    I&#39;m a Backend Engineer who enjoys solving problems around scalability, system design, and reliability.
+                    As a Senior Software Engineer, I&#39;ve worked on large-scale banking and fintech systems, integrating multiple platforms and automating critical workflows. I love building side projects, experimenting with new ideas, and applying emerging tech to real production use cases.
+                    Right now, I&#39;m exploring AI / LLMs and backend-driven product ideas.
                 </p>
 
                 <div className="flex items-center gap-6 pt-2">

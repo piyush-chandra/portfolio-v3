@@ -11,8 +11,8 @@ const TIMELINE_DATA = [
         items: [
             {
                 title: "Ran 1st Half Marathon",
-                description: "Completed my first Half-Marathon run with a time of 2:09:00. A huge personal fitness milestone.",
-                link: "piyus.site/HM" // Example link
+                description: "Completed my first Half-Marathon run with a time of 2:09:50.",
+                link: "piyus.site/HM1" // Example link
             },
             // Add more items for Feb 2026 here
         ]

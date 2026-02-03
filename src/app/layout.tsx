@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import { Header } from "@/components/layout/Header";
+import { SocialFAB } from "@/components/ui/SocialFAB";
 import "./globals.css";
 
 const lato = Lato({
@@ -10,8 +11,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Piyush",
-  description: "Personal website of Piyush.",
+  title: "Piyush 👋",
+  description: "Portfolio of Piyush",
 };
 
 export default function RootLayout({
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Header />
           {children}
         </main>
+        <SocialFAB />
       </body>
     </html>
   );
