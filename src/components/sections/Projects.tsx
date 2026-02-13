@@ -60,28 +60,30 @@ export function Projects() {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
                     >
-                        <Card className="h-full flex flex-col border-neutral-800 bg-neutral-900/40 backdrop-blur-sm group cursor-pointer hover:border-blue-500/30 transition-colors">
-                            <CardHeader>
-                                <div className="flex items-center justify-between">
-                                    <CardTitle className="text-lg text-white group-hover:text-blue-400 transition-colors">
-                                        {project.title}
-                                    </CardTitle>
-                                    <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-blue-400 transition-colors" />
-                                </div>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <CardDescription className="text-neutral-400">
-                                    {project.description}
-                                </CardDescription>
-                            </CardContent>
-                            <CardFooter className="flex flex-wrap gap-2 pt-4">
-                                {project.tech_stack.map((tech) => (
-                                    <Badge key={tech} variant="secondary" className="bg-neutral-800 text-neutral-300 hover:bg-neutral-700">
-                                        {tech}
-                                    </Badge>
-                                ))}
-                            </CardFooter>
-                        </Card>
+                        <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
+                            <Card className="h-full flex flex-col border-neutral-800 bg-neutral-900/40 backdrop-blur-sm group cursor-pointer hover:border-blue-500/30 transition-colors">
+                                <CardHeader>
+                                    <div className="flex items-center justify-between">
+                                        <CardTitle className="text-lg text-white group-hover:text-blue-400 transition-colors">
+                                            {project.title}
+                                        </CardTitle>
+                                        <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-blue-400 transition-colors" />
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <CardDescription className="text-neutral-400">
+                                        {project.description}
+                                    </CardDescription>
+                                </CardContent>
+                                <CardFooter className="flex flex-wrap gap-2 pt-4">
+                                    {project.tech_stack.map((tech) => (
+                                        <Badge key={tech} variant="secondary" className="bg-neutral-800 text-neutral-300 hover:bg-neutral-700">
+                                            {tech}
+                                        </Badge>
+                                    ))}
+                                </CardFooter>
+                            </Card>
+                        </Link>
                     </motion.div>
                 ))}
             </div>
