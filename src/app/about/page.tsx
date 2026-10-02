@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Skills } from "@/components/sections/Skills";
+import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
 
 export default function AboutPage() {
@@ -20,6 +21,7 @@ export default function AboutPage() {
                 </p>
             </div>
             <Skills />
+            <Education />
             <Contact />
         </div>
     );

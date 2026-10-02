@@ -43,7 +43,7 @@ export default function RootLayout({
           {children}
           <footer className="mt-20 text-[12px] font-mono text-neutral-600 text-center space-y-1">
             <p>built with next.js · shipped most weekends</p>
-            <p className="text-neutral-700">bengaluru, india — {new Date().getFullYear()}</p>
+            <p className="text-neutral-700">jaipur, india — {new Date().getFullYear()}</p>
           </footer>
         </main>
         <SocialFAB />

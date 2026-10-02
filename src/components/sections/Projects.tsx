@@ -73,11 +73,11 @@ const PROJECTS_DATA: Project[] = [
         status: "Experiment",
     },
     {
-        title: "ByteStream File Service",
-        one_liner: "Resumable upload/download over byte streams to blob storage.",
-        outcome: "Chunked transfers · Swagger docs · Dockerized FastAPI service",
-        tech_stack: ["Python", "FastAPI", "Blob Storage", "Docker"],
-        live: "https://archit-g.vercel.app/docs",
+        title: "Biometric Attendance System",
+        one_liner: "Enterprise attendance on employees' own phones — dlib face match + GPS, auto-segregating genuine check-ins from spurious ones.",
+        outcome: "Shipped org-wide Oct 2022 – Mar 2023 · camera + GPS sensor fusion",
+        tech_stack: ["Python", "FastAPI", "dlib", ".NET", "Angular", "Docker"],
+        live: "https://mlservices.vultech.in/docs",
         status: "Live",
     },
 ];

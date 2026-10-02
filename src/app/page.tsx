@@ -8,7 +8,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 const ROLES = ["backend engineer", "fintech systems builder", "weekend shipper", "AI/LLM tinkerer"];
 const STATS = [
     { value: "5+ yrs", label: "backend, prod systems" },
-    { value: "80%", label: "TAT cut, best automation" },
+    { value: "70%", label: "TAT cut, AD2 bulk upload" },
     { value: "10+ hrs", label: "saved weekly on reports" },
 ];
 
@@ -77,7 +77,7 @@ export default function Home() {
                     open to new opportunities
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                    <span className="text-neutral-600">●</span> Bengaluru, India · <ISTClock />
+                    <span className="text-neutral-600">●</span> Jaipur, India · <ISTClock />
                 </span>
             </div>
 

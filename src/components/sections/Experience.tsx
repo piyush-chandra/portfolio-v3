@@ -2,64 +2,98 @@
 
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const EXPERIENCE_DATA = [
     {
         company: "AU Small Finance Bank",
-        role: "Technical Analyst",
+        role: "Analyst",
         period: "Dec 2024 – Present",
+        location: "Jaipur",
         achievements: [
-            "Integrated Core Banking System with Treasury Kondor for deal utilisation across Trade Finance modules.",
-            "Developed Excel-based bulk upload for AD2 partners, reducing TAT by 80%.",
-            "Collaborated on MT to MX SWIFT migration project.",
-            "Integrated APIs for New-To-Bank customer outward remittance.",
-            "Automated RBI compliance reports, saving 10+ hours weekly."
-        ]
+            "Excel-based bulk upload for AD2 partners (EbixCash, MakeMyTrip), cutting outward-remittance TAT by 70%.",
+            "API integrations between customer portals and Core Banking for Remittance, LC, and BG products.",
+            "Automated + scheduled mandatory RBI reports — timely compliance, near-zero manual effort.",
+            "Scheduled risk-mitigation email alerts flagging potential transaction errors before they land.",
+            "Production support across remittance and trade-finance modules.",
+        ],
+        tags: ["Core Banking", "REST APIs", "RBI Compliance", "Treasury"],
     },
     {
         company: "Newgen Software",
         role: "Senior Software Engineer",
-        period: "Apr 2021 – Dec 2024",
+        period: "Jul 2023 – Dec 2024",
+        location: "Noida",
         achievements: [
-            "Built Tracer Service for SWIFT (MT799), improving BG closure by 80%.",
-            "Developed unified module for various SWIFT message types.",
-            "Integrated third-party bank apps via REST APIs, reducing TAT by 60%.",
-            "Created Trade Memo Module with email approvals, cutting risk by 90%."
-        ]
-    }
+            "Integrated a leading bank trade-platform frontend (Finastra) with Newgen Trade Finance via IBM MQ + REST for E2E flow.",
+            "Mapped SWIFT N-series messages to Correspondence Events.",
+            "Built Tracer Service notifying applicant & beneficiary on pending transactions.",
+        ],
+        tags: ["IBM MQ", "SWIFT", "Finastra", "Microservices"],
+    },
+    {
+        company: "Newgen Software",
+        role: "Software Engineer",
+        period: "Jul 2021 – Jul 2023",
+        location: "Noida",
+        achievements: [
+            "Contributed to the Import Bills flow; built the Trade Memo superstructure for approval-authority sign-offs, reusable across all Trade Finance processes.",
+            "Built the Notification Service behind Trade Memo email approvals.",
+            "Built Trade Intelligence superstructure summarizing customer risk rating from transaction history.",
+            "Integrated SWIFT MT103 / MT202 / MT202COV / MT110 into the Outward Remittance module.",
+            "Designed the Correspondence Event superstructure for sending/receiving N-series SWIFT messages.",
+        ],
+        tags: ["Java", "Spring Boot", "SWIFT", "Kafka"],
+    },
+    {
+        company: "Newgen Software",
+        role: "Software Engineer Intern",
+        period: "Apr 2021 – Jun 2021",
+        location: "Noida",
+        achievements: [
+            "BPM system for an insurance client to cut claim-processing time; built TAT-visualization reports.",
+        ],
+        tags: ["BPM", "Reporting"],
+    },
 ];
 
 export function Experience() {
     return (
         <section className="space-y-8 py-10">
-            {/* Heading removed for page-based layout */}
-
-
             <div className="grid gap-6">
                 {EXPERIENCE_DATA.map((job, index) => (
                     <motion.div
-                        key={index}
+                        key={`${job.company}-${job.role}`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.08 }}
                     >
-                        <Card className="border-neutral-800 bg-neutral-900/40 backdrop-blur-sm">
+                        <Card className="border-neutral-800 bg-neutral-900/40 backdrop-blur-sm hover:border-neutral-700 transition-colors">
                             <CardHeader>
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                                     <div>
                                         <CardTitle className="text-lg text-white">{job.company}</CardTitle>
-                                        <CardDescription className="text-neutral-400 font-medium">{job.role}</CardDescription>
+                                        <CardDescription className="text-neutral-400 font-medium">
+                                            {job.role} <span className="text-neutral-600">· {job.location}</span>
+                                        </CardDescription>
                                     </div>
-                                    <span className="text-sm text-neutral-500">{job.period}</span>
+                                    <span className="text-sm text-neutral-500 font-mono whitespace-nowrap">{job.period}</span>
                                 </div>
                             </CardHeader>
-                            <CardContent>
-                                <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300">
+                            <CardContent className="space-y-4">
+                                <ul className="list-disc list-outside ml-4 space-y-2 text-sm text-neutral-300 leading-relaxed">
                                     {job.achievements.map((achievement, i) => (
                                         <li key={i}>{achievement}</li>
                                     ))}
                                 </ul>
+                                <div className="flex flex-wrap gap-1.5">
+                                    {job.tags.map((t) => (
+                                        <Badge key={t} variant="secondary" className="bg-neutral-800/70 text-[11px] text-neutral-400">
+                                            {t}
+                                        </Badge>
+                                    ))}
+                                </div>
                             </CardContent>
                         </Card>
                     </motion.div>
