@@ -1,0 +1,18 @@
+# Piyush Chandra — piyus.site / portfolio
+
+> Backend engineer (Java, Python, Spring Boot, FastAPI) across banking & fintech:
+> AU Small Finance Bank (Analyst, remittance/trade finance), Newgen Software
+> (Senior Software Engineer, trade finance + SWIFT). Jaipur, India.
+
+## Highlights
+- Cut AD2 partner remittance turnaround time 70% with an Excel bulk-upload pipeline.
+- Automated RBI compliance reporting; risk-mitigation transaction alerts.
+- Integrated Finastra trade frontend with Newgen Trade Finance via IBM MQ + REST.
+- Built Tracer Service for pending SWIFT correspondence; Trade Memo + Trade Intelligence superstructures.
+- Side build: Diabetes Risk Check — private in-browser screening, 5-expert stacking
+  ensemble, 10-algo benchmark, CTGAN study. Live demo + code on /projects.
+
+## Elsewhere
+- GitHub: https://github.com/piyush-chandra
+- LinkedIn: https://www.linkedin.com/in/piyushclick/
+- Email: piyushchandra@duck.com

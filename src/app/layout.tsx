@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { SocialFAB } from "@/components/ui/SocialFAB";
+import { StickyCTA } from "@/components/ui/StickyCTA";
 import { Spotlight, ScrollProgress } from "@/components/ui/Spotlight";
 import "./globals.css";
 
@@ -12,8 +13,14 @@ const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#000000",
+};
+
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-v3-one-xi.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://piyus.site"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-v3-one-xi.vercel.app"),
   title: "Piyush — Backend Engineer",
   description: "Piyush Chandra — Senior Software Engineer. Banking & fintech backends, weekend builds, AI/LLM tinkering. Latest: Diabetes Risk Check, private in-browser screening.",
   openGraph: {
@@ -47,13 +54,35 @@ export default function RootLayout({
         <main className="max-w-2xl mx-auto px-6 py-20 md:py-32 relative z-10 flex flex-col items-center text-center">
           <Header />
           {children}
-          <footer className="mt-20 text-[12px] font-mono text-neutral-600 text-center space-y-1">
+          <footer className="mt-20 text-[12px] font-mono text-neutral-500 text-center space-y-1 pb-20 md:pb-0">
             <p>built with next.js · shipped most weekends</p>
-            <p className="text-neutral-700">jaipur, india — {new Date().getFullYear()}</p>
+            <p className="text-neutral-500">jaipur, india — {new Date().getFullYear()}</p>
           </footer>
         </main>
         <SocialFAB />
+        <StickyCTA />
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Piyush Chandra",
+              jobTitle: "Senior Software Engineer",
+              address: { "@type": "PostalAddress", addressLocality: "Jaipur", addressCountry: "IN" },
+              url: SITE,
+              sameAs: [
+                "https://github.com/piyush-chandra",
+                "https://www.linkedin.com/in/piyushclick/",
+                "https://x.com/piyushstwt",
+              ],
+              knowsAbout: ["Java", "Spring Boot", "Python", "FastAPI", "SWIFT", "Microservices", "Machine Learning"],
+              worksFor: [{ "@type": "Organization", name: "AU Small Finance Bank" }],
+              alumniOf: [{ "@type": "Organization", name: "Newgen Software" }],
+            }),
+          }}
+        />
       </body>
     </html>
   );

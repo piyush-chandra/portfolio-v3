@@ -50,7 +50,7 @@ export function SocialFAB() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className="fixed bottom-8 right-8 z-50">
+        <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50">
             <AnimatePresence>
                 {isExpanded && (
                     <div className="absolute bottom-20 right-0 flex flex-col-reverse items-center gap-3">

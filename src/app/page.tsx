@@ -12,7 +12,7 @@ const STATS = [
     { value: "70%", label: "TAT cut, AD2 bulk upload" },
     { value: "10+ hrs", label: "saved weekly on reports" },
 ];
-const PROOF = ["half-marathon 2:09:50", " weekend shipper", "6× certified ML"];
+const PROOF = ["half-marathon 2:09:50", "weekend shipper", "6× certified ML"];
 
 function useTyping(words: string[], typeMs = 55, holdMs = 1600) {
     const [text, setText] = useState("");
@@ -153,10 +153,10 @@ export default function Home() {
 
             {/* proof strip + now-line */}
             <div className="space-y-2">
-                <p className="text-[12px] font-mono text-neutral-600">
+                <p className="text-[12px] font-mono text-neutral-500">
                     proof of life: {PROOF.join(" · ")}
                 </p>
-                <p className="text-[13px] font-mono text-neutral-600">
+                <p className="text-[13px] font-mono text-neutral-500">
                     <span className="text-neutral-500">now:</span> shipping weekend builds · running half-marathons (2:09:50) · reading DDIA
                 </p>
             </div>
