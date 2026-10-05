@@ -13,7 +13,7 @@ export default function WritingPage() {
         <div className="w-full text-left space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="space-y-2">
                 <h1 className="text-2xl font-bold text-white">writing</h1>
-                <p className="text-neutral-400 text-[15px]">short notes on things I&apos;ve built and measured. No growth hacks.</p>
+                <p className="text-neutral-400 text-[15px]">short notes on things I&apos;ve built and measured. No growth hacks. <a href="/writing/rss.xml" className="underline decoration-neutral-600 underline-offset-4 hover:text-white transition-colors">RSS</a></p>
             </div>
             <div className="grid gap-4">
                 {POSTS.map((p) => (

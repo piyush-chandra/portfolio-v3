@@ -36,6 +36,19 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             <div className="space-y-4 text-[15px] leading-relaxed text-neutral-300 [&_strong]:text-white [&_code]:font-mono [&_code]:text-[13px] [&_code]:text-blue-300 [&_code]:bg-blue-500/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded">
                 {post.body}
             </div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BlogPosting",
+                        headline: post.title,
+                        description: post.hook,
+                        datePublished: new Date(post.date).toISOString(),
+                        author: { "@type": "Person", name: "Piyush Chandra", url: "https://github.com/piyush-chandra" },
+                    }),
+                }}
+            />
             <div className="space-y-3 pt-4 border-t border-white/5">
                 <p className="text-sm font-semibold uppercase tracking-widest text-neutral-500">keep reading</p>
                 {POSTS.filter((p) => p.slug !== post.slug).map((p) => (
