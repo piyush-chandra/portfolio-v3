@@ -39,15 +39,17 @@ const PROJECTS_DATA: Project[] = [
         tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker", "HTMX"],
         live: "https://piyus.site",
         status: "Live",
+        caseStudy: "/writing/my-own-bitly",
     },
     {
         title: "Group Chat",
-        one_liner: "Real-time group chat — WebSocket rooms, presence, persisted history.",
-        outcome: "FastAPI WebSocket backend + React frontend, split repos (chat-b / chat-f)",
-        tech_stack: ["Python", "FastAPI", "WebSocket", "React", "Docker"],
+        one_liner: "Group chat on plain REST + polling — timestamped log, paginated history, zero socket ops.",
+        outcome: "FastAPI backend + React frontend, split repos (chat-b / chat-f) · polling beats sockets at this scale",
+        tech_stack: ["Python", "FastAPI", "REST", "React", "Docker"],
         live: "https://pi-c.vercel.app/",
         github: "https://github.com/piyush-chandra/chat-f",
         status: "Live",
+        caseStudy: "/writing/group-chat-rest-polling",
     },
     {
         title: "ToolChat — Gemini Wrapper",
@@ -56,6 +58,7 @@ const PROJECTS_DATA: Project[] = [
         tech_stack: ["Next.js", "TypeScript", "Gemini API", "Tailwind"],
         live: "https://pitools.vercel.app",
         status: "Live",
+        caseStudy: "/writing/toolchat-blocked-chatgpt",
     },
     {
         title: "NeetCode Submissions",
@@ -72,6 +75,7 @@ const PROJECTS_DATA: Project[] = [
         tech_stack: ["Next.js", "TypeScript", "Python", "LLMs"],
         github: "https://github.com/piyush-chandra/Local-LLM",
         status: "Experiment",
+        caseStudy: "/writing/edge-llm-proxy",
     },
     {
         title: "Biometric Attendance System",
