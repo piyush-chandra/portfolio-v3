@@ -1,11 +1,21 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import { Experience } from "@/components/sections/Experience";
+
+export const metadata: Metadata = {
+    title: "Experience · Piyush",
+    description: "AU Small Finance Bank and Newgen Software: remittance, trade finance, SWIFT, compliance automation.",
+    alternates: { canonical: "/experience" },
+    openGraph: {
+        title: "Experience · Piyush",
+        description: "Banking & fintech engineering: TAT cuts, SWIFT integrations, RBI automation.",
+        url: "/experience",
+    },
+};
 
 export default function ExperiencePage() {
     return (
         <div className="w-full text-left animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="mb-10 text-center space-y-4">
-                <h1 className="text-3xl font-bold"></h1>
                 <p className="text-neutral-400">my professional journey.</p>
             </div>
             <Experience />

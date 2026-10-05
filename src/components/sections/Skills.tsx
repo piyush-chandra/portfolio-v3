@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
 const SKILLS_DATA = {
-    "Languages": ["Java", "Python", "JavaScript", "SQL"],
-    "Frameworks & Tools": ["Spring Boot", "FastAPI", "JUnit", "Maven", "Docker", "Kafka", "Git", "ELK", "AWS", "IBM MQ", "SVN"],
+    "Languages": ["Java", "Python", "JavaScript", "SQL", "MongoDB", "C/C++", "HTML/CSS"],
+    "Frameworks & Tools": ["Spring Boot", "FastAPI", "Angular", "JUnit", "Maven", "Docker", "Kafka", "Git", "ELK", "AWS", "IBM MQ", "SVN"],
     "Methodologies": ["Agile", "Microservices", "CI/CD", "TDD"]
 };
 
@@ -25,7 +25,7 @@ export function Skills() {
                         transition={{ delay: index * 0.1 }}
                         className="space-y-3"
                     >
-                        <h3 className="text-sm font-semibold text-neutral-500 uppercase tracking-widest">{category}</h3>
+                        <h2 className="text-sm font-semibold text-neutral-400 uppercase tracking-widest">{category}</h2>
                         <div className="flex flex-wrap gap-2">
                             {skills.map((skill) => (
                                 <Badge

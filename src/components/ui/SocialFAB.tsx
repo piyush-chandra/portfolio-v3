@@ -82,6 +82,8 @@ export function SocialFAB() {
             {/* Main FAB Button - stays in place */}
             <motion.button
                 onClick={() => setIsExpanded(!isExpanded)}
+                aria-label={isExpanded ? "Close social links" : "Open social links"}
+                aria-expanded={isExpanded}
                 className="w-14 h-14 rounded-full bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 flex items-center justify-center text-white shadow-lg transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

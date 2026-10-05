@@ -1,13 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Skills } from "@/components/sections/Skills";
 import { Education } from "@/components/sections/Education";
 import { Contact } from "@/components/sections/Contact";
 
+export const metadata: Metadata = {
+    title: "About · Piyush",
+    description: "Backend engineer in banking & fintech. Skills, education, certifications, contact.",
+    alternates: { canonical: "/about" },
+    openGraph: {
+        title: "About · Piyush",
+        description: "Skills, education, contact.",
+        url: "/about",
+    },
+};
+
 export default function AboutPage() {
     return (
         <div className="w-full text-left space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="text-start space-y-4">
-                <h1 className="text-3xl font-bold"></h1>
                 <p className="text-white-400 leading-relaxed max-w-lg mx-auto">
                     I&#39;m Piyush, a Senior Software Engineer with a strong focus on building scalable, reliable backend systems that solve real business problems. Most of my work revolves around designing APIs, integrating complex systems, and improving performance and turnaround time in high-impact, production environments.
                 </p>

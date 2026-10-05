@@ -23,7 +23,7 @@ export function LatencyBadge() {
         <button
             onClick={ping}
             title="Round-trip to this site's own API — click to re-ping"
-            className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.02] px-2.5 py-1 text-[12px] text-neutral-400 hover:text-neutral-200 hover:border-blue-500/30 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.02] px-3 py-2 text-[12px] text-neutral-400 hover:text-neutral-200 hover:border-blue-500/30 transition-colors cursor-pointer"
         >
             <Activity className="w-3 h-3 text-blue-400" />
             {ms === null ? (

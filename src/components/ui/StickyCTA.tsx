@@ -18,7 +18,7 @@ export function StickyCTA() {
         <div className="fixed inset-x-0 bottom-0 z-40 md:hidden border-t border-white/10 bg-black/85 backdrop-blur-md px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             <div className="flex gap-3">
                 <a
-                    href="https://piyus.site/resume"
+                    href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-black"

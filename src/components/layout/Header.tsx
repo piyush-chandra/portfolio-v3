@@ -12,7 +12,7 @@ const NAV_LINKS = [
     { href: "/projects", label: "projects" },
     { href: "/writing", label: "writing" },
     { href: "https://github.com/piyush-chandra", label: "github", external: true },
-    { href: "https://piyus.site/resume", label: "resume", external: true },
+    { href: "/resume.pdf", label: "resume" },
     { href: "/timeline", label: "timeline" },
     // { href: "/books", label: "books" },
 ];
@@ -58,12 +58,20 @@ export function Header() {
                             key={link.label}
                             href={link.href}
                             target={link.external ? "_blank" : undefined}
+                            rel={link.external ? "noopener noreferrer" : undefined}
                             className={cn(
-                                "underline decoration-neutral-600 underline-offset-4 transition-all hover:text-white hover:-translate-y-1",
+                                "relative inline-flex items-center min-h-[44px] underline decoration-neutral-600 underline-offset-4 transition-all hover:text-white hover:-translate-y-1",
                                 pathname === link.href && "text-white"
                             )}
                         >
                             {link.label}
+                            {pathname === link.href && !link.external && (
+                                <motion.span
+                                    layoutId="nav-pill"
+                                    className="absolute -bottom-1.5 left-0 right-0 h-[2px] rounded-full bg-blue-400"
+                                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                                />
+                            )}
                         </Link>
                     ))}
                 </nav>

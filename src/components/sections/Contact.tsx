@@ -67,12 +67,13 @@ export function Contact() {
                         </form>
                     )
                 ) : (
-                    <a href={`mailto:${EMAIL}`}>
-                        <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white border-none">
-                            <Mail className="w-4 h-4" />
-                            Say Hello
-                            <ArrowRight className="w-4 h-4" />
-                        </Button>
+                    <a
+                        href={`mailto:${EMAIL}`}
+                        className="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-8 py-3 text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                    >
+                        <Mail className="w-4 h-4" />
+                        Say Hello
+                        <ArrowRight className="w-4 h-4" />
                     </a>
                 )}
 

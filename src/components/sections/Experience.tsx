@@ -9,17 +9,18 @@ import { Badge } from "@/components/ui/badge";
 const EXPERIENCE_DATA = [
     {
         company: "AU Small Finance Bank",
-        role: "Analyst",
+        role: "Technical Analyst",
         period: "Dec 2024 – Present",
         location: "Jaipur",
         achievements: [
             "Excel-based bulk upload for AD2 partners (EbixCash, MakeMyTrip), cutting outward-remittance TAT by 70%.",
-            "API integrations between customer portals and Core Banking for Remittance, LC, and BG products.",
-            "Automated + scheduled mandatory RBI reports — timely compliance, near-zero manual effort.",
+            "API integrations between customer portals and Core Banking for Remittance, LC, BG, and New-To-Bank outward remittance.",
+            "Automated + scheduled mandatory RBI reports — on-time compliance at near-zero manual effort (previously 10+ hrs/week).",
+            "Collaborated with the OFSS (Oracle) team on the MT-to-MX SWIFT migration.",
             "Scheduled risk-mitigation email alerts flagging potential transaction errors before they land.",
             "Production support across remittance and trade-finance modules.",
         ],
-        tags: ["Core Banking", "REST APIs", "RBI Compliance", "Treasury"],
+        tags: ["Core Banking", "REST APIs", "RBI Compliance", "SWIFT"],
     },
     {
         company: "Newgen Software",
@@ -27,11 +28,12 @@ const EXPERIENCE_DATA = [
         period: "Jul 2023 – Dec 2024",
         location: "Noida",
         achievements: [
+            "Built Tracer Service automating reminders in Bank Guarantee transactions via SWIFT MT799 — improving BG closure by 80%.",
+            "Developed a unified module for SWIFT message types (MT103, MT202, MT202COV, MT110, MT760, MT767, N-series).",
             "Integrated a leading bank trade-platform frontend (Finastra) with Newgen Trade Finance via IBM MQ + REST for E2E flow.",
-            "Mapped SWIFT N-series messages to Correspondence Events.",
-            "Built Tracer Service notifying applicant & beneficiary on pending transactions.",
+            "Integrated third-party bank apps via REST APIs, reducing transaction TAT by 60%.",
         ],
-        tags: ["IBM MQ", "SWIFT", "Finastra", "Microservices"],
+        tags: ["IBM MQ", "SWIFT", "Finastra", "Spring Batch"],
     },
     {
         company: "Newgen Software",
@@ -40,7 +42,7 @@ const EXPERIENCE_DATA = [
         location: "Noida",
         achievements: [
             "Contributed to the Import Bills flow; built the Trade Memo superstructure for approval-authority sign-offs, reusable across all Trade Finance processes.",
-            "Built the Notification Service behind Trade Memo email approvals.",
+            "Built the Notification Service behind Trade Memo email approvals for AML and high-value transactions.",
             "Built Trade Intelligence superstructure summarizing customer risk rating from transaction history.",
             "Integrated SWIFT MT103 / MT202 / MT202COV / MT110 into the Outward Remittance module.",
             "Designed the Correspondence Event superstructure for sending/receiving N-series SWIFT messages.",

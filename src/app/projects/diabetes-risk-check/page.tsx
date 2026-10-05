@@ -4,6 +4,13 @@ import { CaseHero, CaseSection } from "@/components/sections/CaseStudy";
 export const metadata: Metadata = {
     title: "Diabetes Risk Check — case study · Piyush",
     description: "Private in-browser diabetes screening: 5-expert stacking ensemble, 10-algo honest benchmark, CTGAN study, parity-verified JS artifact.",
+    alternates: { canonical: "/projects/diabetes-risk-check" },
+    openGraph: {
+        title: "Diabetes Risk Check — case study",
+        description: "5-expert ensemble, honest benchmarks, zero server inference.",
+        url: "/projects/diabetes-risk-check",
+        type: "article",
+    },
 };
 
 export default function DiabetesCase() {

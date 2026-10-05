@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +38,6 @@ const PROJECTS_DATA: Project[] = [
         outcome: "Custom slugs + click tracking · FastAPI + HTMX, Dockerized",
         tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker", "HTMX"],
         live: "https://piyus.site",
-        github: "https://github.com/piyush-chandra/url-shortner-python",
         status: "Live",
     },
     {
@@ -55,15 +55,14 @@ const PROJECTS_DATA: Project[] = [
         outcome: "Local history + bookmarked answers · basic auth · proxy-tunnel concept",
         tech_stack: ["Next.js", "TypeScript", "Gemini API", "Tailwind"],
         live: "https://pitools.vercel.app",
-        github: "https://github.com/piyush-chandra/wrapper",
         status: "Live",
     },
     {
-        title: "Backend Weekend Kit",
-        one_liner: "All-in-one FastAPI starter so weekend ideas ship by Sunday night.",
-        outcome: "One template for auth, DB, uploads, docs — reused across 4+ builds above",
-        tech_stack: ["Python", "FastAPI", "SQLAlchemy", "Docker"],
-        github: "https://github.com/piyush-chandra/Backend",
+        title: "NeetCode Submissions",
+        one_liner: "Ongoing DSA practice — data structures, algorithms, and design patterns with notes.",
+        outcome: "Steady interview-readiness signal · Java-first solutions",
+        tech_stack: ["Java", "Python", "DSA", "Design Patterns"],
+        github: "https://github.com/piyush-chandra/neetcode-submissions",
         status: "Code",
     },
     {
@@ -103,6 +102,15 @@ function StatusDot({ status }: { status: Project["status"] }) {
 }
 
 function ProjectCard({ project, index, big = false }: { project: Project; index: number; big?: boolean }) {
+    const [tilt, setTilt] = useState({ x: 0, y: 0 });
+    function onMove(e: React.MouseEvent<HTMLDivElement>) {
+        const r = e.currentTarget.getBoundingClientRect();
+        setTilt({
+            x: Math.round(((e.clientX - r.left) / r.width - 0.5) * 12),
+            y: Math.round(((e.clientY - r.top) / r.height - 0.5) * 12),
+        });
+    }
+    function reset() { setTilt({ x: 0, y: 0 }); }
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,8 +118,14 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
             viewport={{ once: true, margin: "-40px" }}
             transition={{ delay: (index % 3) * 0.08, duration: 0.4 }}
             whileHover={{ y: -4 }}
-            className={big ? "md:col-span-2" : ""}
+            className={big ? "lg:col-span-2" : ""}
         >
+            <div
+                onMouseMove={onMove}
+                onMouseLeave={reset}
+                className="h-full transition-transform duration-200 ease-out will-change-transform"
+                style={{ transform: `translate(${tilt.x}px, ${tilt.y}px)` }}
+            >
             <Card
                 className={`h-full flex flex-col border-neutral-800 bg-neutral-900/40 backdrop-blur-sm group cursor-default overflow-hidden relative transition-colors duration-300 hover:border-blue-500/40 hover:bg-neutral-900/70 hover:shadow-[0_8px_40px_-12px_rgba(59,130,246,0.35)] ${big ? "border-blue-500/20 bg-gradient-to-b from-blue-950/30 to-neutral-900/40" : ""}`}
             >
@@ -148,13 +162,13 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
                             </Badge>
                         ))}
                     </div>
-                    <div className="flex items-center gap-4 text-sm">
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
                         {project.live && (
                             <Link
                                 href={project.live}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white font-medium transition-colors group/link"
+                                className="inline-flex items-center gap-1.5 py-2 text-neutral-300 hover:text-white font-medium transition-colors group/link"
                             >
                                 <span className="underline decoration-neutral-600 underline-offset-4 group-hover/link:decoration-blue-400">Live demo</span>
                                 <ExternalLink className="w-3.5 h-3.5 text-neutral-500 group-hover/link:text-blue-400 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
@@ -165,7 +179,7 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 text-neutral-500 hover:text-white transition-colors group/link"
+                                className="inline-flex items-center gap-1.5 py-2 text-neutral-500 hover:text-white transition-colors group/link"
                             >
                                 <Github className="w-4 h-4" />
                                 <span className="underline decoration-neutral-700 underline-offset-4 group-hover/link:decoration-neutral-400">Code</span>
@@ -183,6 +197,7 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
                     </div>
                 </CardFooter>
             </Card>
+            </div>
         </motion.div>
     );
 }
@@ -190,7 +205,7 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
 export function Projects() {
     return (
         <section className="space-y-8 py-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <ProjectCard project={FEATURED} index={0} big />
                 {PROJECTS_DATA.map((project, i) => (
                     <ProjectCard key={project.title} project={project} index={i + 1} />
@@ -198,7 +213,7 @@ export function Projects() {
             </div>
             <p className="text-center text-sm text-neutral-600">
                 + more experiments on{" "}
-                <Link href="https://github.com/piyush-chandra?tab=repositories" target="_blank" className="text-neutral-400 underline decoration-neutral-700 underline-offset-4 hover:text-white transition-colors">
+                <Link href="https://github.com/piyush-chandra?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-neutral-400 underline decoration-neutral-700 underline-offset-4 hover:text-white transition-colors">
                     GitHub
                 </Link>
                 {" "}— I ship most weekends.

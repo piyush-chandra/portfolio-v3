@@ -45,13 +45,19 @@ export default function RootLayout({
       <body
         className={`${lato.variable} antialiased min-h-screen bg-black text-white selection:bg-blue-500/30 font-sans`}
       >
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] focus:rounded-full focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+        >
+          Skip to content
+        </a>
         <ScrollProgress />
         <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
           <div className="absolute inset-0 bg-grid" />
           <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-black to-black" />
         </div>
         <Spotlight />
-        <main className="max-w-2xl mx-auto px-6 py-20 md:py-32 relative z-10 flex flex-col items-center text-center">
+        <main id="main" className="max-w-2xl mx-auto px-6 py-20 md:py-32 relative z-10 flex flex-col items-center text-center">
           <Header />
           {children}
           <footer className="mt-20 text-[12px] font-mono text-neutral-500 text-center space-y-1 pb-20 md:pb-0">

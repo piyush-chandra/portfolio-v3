@@ -4,6 +4,13 @@ import { CaseHero, CaseSection } from "@/components/sections/CaseStudy";
 export const metadata: Metadata = {
     title: "AD2 bulk upload · TAT −70% — case study · Piyush",
     description: "Excel-based bulk upload for AD2 remittance partners at AU Small Finance Bank: 70% TAT cut, RBI automation, risk alerts.",
+    alternates: { canonical: "/projects/ad2-bulk-upload" },
+    openGraph: {
+        title: "AD2 bulk upload · TAT −70%",
+        description: "Excel bulk upload + RBI automation in production banking.",
+        url: "/projects/ad2-bulk-upload",
+        type: "article",
+    },
 };
 
 export default function BulkUploadCase() {
