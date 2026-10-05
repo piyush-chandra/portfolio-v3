@@ -10,6 +10,7 @@ const NAV_LINKS = [
     { href: "/about", label: "about" },
     { href: "/experience", label: "experience" },
     { href: "/projects", label: "projects" },
+    { href: "/writing", label: "writing" },
     { href: "https://github.com/piyush-chandra", label: "github", external: true },
     { href: "https://piyus.site/resume", label: "resume", external: true },
     { href: "/timeline", label: "timeline" },

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -99,6 +101,13 @@ export function Experience() {
                     </motion.div>
                 ))}
             </div>
+            <p className="text-center text-sm text-neutral-500 pt-2">
+                deep dive:{" "}
+                <Link href="/projects/ad2-bulk-upload" className="inline-flex items-center gap-1 text-neutral-300 underline decoration-blue-500/50 underline-offset-4 hover:text-white transition-colors group">
+                    how the AD2 bulk upload cut TAT 70%
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+            </p>
         </section>
     );
 }

@@ -13,12 +13,18 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://piyus.site"),
   title: "Piyush — Backend Engineer",
   description: "Piyush Chandra — Senior Software Engineer. Banking & fintech backends, weekend builds, AI/LLM tinkering. Latest: Diabetes Risk Check, private in-browser screening.",
   openGraph: {
     title: "Piyush — Backend Engineer",
     description: "Scalable backends, fintech systems, weekend ships. Latest: Diabetes Risk Check.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Piyush — Backend Engineer",
+    description: "Banking & fintech backends, weekend builds, AI/LLM tinkering.",
   },
 };
 

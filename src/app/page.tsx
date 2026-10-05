@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FileDown } from "lucide-react";
+import { LatencyBadge } from "@/components/ui/LatencyBadge";
 
 const ROLES = ["backend engineer", "fintech systems builder", "weekend shipper", "AI/LLM tinkerer"];
 const STATS = [
@@ -11,6 +12,7 @@ const STATS = [
     { value: "70%", label: "TAT cut, AD2 bulk upload" },
     { value: "10+ hrs", label: "saved weekly on reports" },
 ];
+const PROOF = ["half-marathon 2:09:50", " weekend shipper", "6× certified ML"];
 
 function useTyping(words: string[], typeMs = 55, holdMs = 1600) {
     const [text, setText] = useState("");
@@ -79,6 +81,7 @@ export default function Home() {
                 <span className="inline-flex items-center gap-1.5">
                     <span className="text-neutral-600">●</span> Jaipur, India · <ISTClock />
                 </span>
+                <LatencyBadge />
             </div>
 
             {/* typing identity */}
@@ -91,6 +94,10 @@ export default function Home() {
                     I&apos;m a backend engineer who likes problems around scalability, system design, and reliability.
                     Senior Software Engineer across banking &amp; fintech — core-banking ↔ treasury integrations,
                     SWIFT migrations, bulk-upload and compliance automations that actually move TAT.
+                </p>
+                {/* trust line — recognition shortcut for the 6-second scan */}
+                <p className="text-[13px] font-mono text-neutral-500">
+                    previously: <span className="text-neutral-300">AU Small Finance Bank</span> · <span className="text-neutral-300">Newgen Software</span> · Finastra ecosystem
                 </p>
                 <p className="text-neutral-400 leading-relaxed text-[15px] max-w-[560px]">
                     Right now: exploring AI/LLMs on backend-driven products. Latest ship →{" "}
@@ -117,7 +124,7 @@ export default function Home() {
                 ))}
             </div>
 
-            {/* CTAs */}
+            {/* CTAs — resume is the most-clicked element on hire-me sites */}
             <div className="flex flex-wrap items-center gap-3">
                 <Link
                     href="/projects"
@@ -126,6 +133,15 @@ export default function Home() {
                     see what i&apos;ve built
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
+                <a
+                    href="https://piyus.site/resume"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-500 transition-colors group"
+                >
+                    <FileDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                    résumé (pdf)
+                </a>
                 <Link
                     href="/about"
                     className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-2.5 text-sm text-neutral-300 hover:text-white hover:border-white/25 transition-colors group"
@@ -135,10 +151,15 @@ export default function Home() {
                 </Link>
             </div>
 
-            {/* now-line */}
-            <p className="text-[13px] font-mono text-neutral-600">
-                <span className="text-neutral-500">now:</span> shipping weekend builds · running half-marathons (2:09:50) · reading DDIA
-            </p>
+            {/* proof strip + now-line */}
+            <div className="space-y-2">
+                <p className="text-[12px] font-mono text-neutral-600">
+                    proof of life: {PROOF.join(" · ")}
+                </p>
+                <p className="text-[13px] font-mono text-neutral-600">
+                    <span className="text-neutral-500">now:</span> shipping weekend builds · running half-marathons (2:09:50) · reading DDIA
+                </p>
+            </div>
         </motion.div>
     );
 }

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Star, FlaskConical } from "lucide-react";
+import { ExternalLink, Github, Star, FlaskConical, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 type Project = {
@@ -15,6 +15,7 @@ type Project = {
     github?: string;
     status: "Live" | "Code" | "Experiment";
     featured?: boolean;
+    caseStudy?: string;
 };
 
 const FEATURED: Project = {
@@ -26,6 +27,7 @@ const FEATURED: Project = {
     github: "https://github.com/piyush-chandra/diabetes-risk-check",
     status: "Live",
     featured: true,
+    caseStudy: "/projects/diabetes-risk-check",
 };
 
 const PROJECTS_DATA: Project[] = [
@@ -167,6 +169,15 @@ function ProjectCard({ project, index, big = false }: { project: Project; index:
                             >
                                 <Github className="w-4 h-4" />
                                 <span className="underline decoration-neutral-700 underline-offset-4 group-hover/link:decoration-neutral-400">Code</span>
+                            </Link>
+                        )}
+                        {project.caseStudy && (
+                            <Link
+                                href={project.caseStudy}
+                                className="inline-flex items-center gap-1.5 text-blue-300/90 hover:text-blue-200 font-medium transition-colors group/link"
+                            >
+                                <span className="underline decoration-blue-500/50 underline-offset-4">Read the story</span>
+                                <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                             </Link>
                         )}
                     </div>
