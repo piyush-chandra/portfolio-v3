@@ -9,7 +9,7 @@ import { LatencyBadge } from "@/components/ui/LatencyBadge";
 const ROLES = ["backend engineer", "fintech systems builder", "weekend shipper", "AI/LLM tinkerer"];
 const STATS = [
     { target: 5, suffix: "+ yrs", label: "backend, prod systems" },
-    { target: 70, suffix: "%", label: "TAT cut, AD2 bulk upload" },
+    { target: 80, suffix: "%", label: "TAT cut, AD2 bulk upload" },
     { target: 10, suffix: "+ hrs", label: "saved weekly on reports" },
 ];
 

@@ -9,11 +9,11 @@ import { Badge } from "@/components/ui/badge";
 const EXPERIENCE_DATA = [
     {
         company: "AU Small Finance Bank",
-        role: "Technical Analyst",
+        role: "Analyst",
         period: "Dec 2024 – Present",
         location: "Jaipur",
         achievements: [
-            "Excel-based bulk upload for AD2 partners (EbixCash, MakeMyTrip), cutting outward-remittance TAT by 70%.",
+            "Excel-based bulk upload for AD2 partners (EbixCash, MakeMyTrip), cutting outward-remittance TAT by 80%.",
             "API integrations between customer portals and Core Banking for Remittance, LC, BG, and New-To-Bank outward remittance.",
             "Automated + scheduled mandatory RBI reports — on-time compliance at near-zero manual effort (previously 10+ hrs/week).",
             "Collaborated with the OFSS (Oracle) team on the MT-to-MX SWIFT migration.",
@@ -106,7 +106,7 @@ export function Experience() {
             <p className="text-center text-sm text-neutral-500 pt-2">
                 deep dive:{" "}
                 <Link href="/projects/ad2-bulk-upload" className="inline-flex items-center gap-1 text-neutral-300 underline decoration-blue-500/50 underline-offset-4 hover:text-white transition-colors group">
-                    how the AD2 bulk upload cut TAT 70%
+                    how the AD2 bulk upload cut TAT 80%
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
             </p>

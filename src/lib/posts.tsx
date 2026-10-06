@@ -12,10 +12,10 @@ export type Post = {
 export const POSTS: Post[] = [
     {
         slug: "bulk-uploads-beat-dashboards",
-        title: "Bulk uploads beat dashboards: cutting remittance TAT 70%",
+        title: "Bulk uploads beat dashboards: cutting remittance TAT 80%",
         date: "Mar 2025",
         minutes: 4,
-        hook: "Ops lived in Excel. So the automation went to Excel — row-level validation, one ledger, 70% faster turnarounds.",
+        hook: "Ops lived in Excel. So the automation went to Excel — row-level validation, one ledger, 80% faster turnarounds.",
         body: (
             <>
                 <p>
@@ -37,7 +37,7 @@ export const POSTS: Post[] = [
                 <p>
                     Around the upload, two adjacent time-sinks got automated: scheduled RBI compliance reports
                     for the Business team, and risk-mitigation email alerts that flag suspicious transactions
-                    to Operations <em>before</em> they settle. Result: 70% TAT cut on the partner flow, on-time
+                    to Operations <em>before</em> they settle. Result: 80% TAT cut on the partner flow, on-time
                     compliance at near-zero manual effort.
                 </p>
                 <p>

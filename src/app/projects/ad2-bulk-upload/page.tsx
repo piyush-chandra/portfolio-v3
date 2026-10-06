@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { CaseHero, CaseSection } from "@/components/sections/CaseStudy";
 
 export const metadata: Metadata = {
-    title: "AD2 bulk upload · TAT −70% — case study · Piyush",
-    description: "Excel-based bulk upload for AD2 remittance partners at AU Small Finance Bank: 70% TAT cut, RBI automation, risk alerts.",
+    title: "AD2 bulk upload · TAT −80% — case study · Piyush",
+    description: "Excel-based bulk upload for AD2 remittance partners at AU Small Finance Bank: 80% TAT cut, RBI automation, risk alerts.",
     alternates: { canonical: "/projects/ad2-bulk-upload" },
     openGraph: {
-        title: "AD2 bulk upload · TAT −70%",
+        title: "AD2 bulk upload · TAT −80%",
         description: "Excel bulk upload + RBI automation in production banking.",
         url: "/projects/ad2-bulk-upload",
         type: "article",
@@ -18,8 +18,8 @@ export default function BulkUploadCase() {
         <div className="w-full text-left space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <CaseHero
                 kicker="case study · production banking"
-                title="AD2 bulk upload — remittance TAT down 70%"
-                lede="Outward-remittance transactions from AD2 partners (EbixCash, MakeMyTrip) were processed one by one. An Excel-based bulk-upload flow into the Core Banking path cut turnaround time by 70% — built at AU Small Finance Bank, Jaipur."
+                title="AD2 bulk upload — remittance TAT down 80%"
+                lede="Outward-remittance transactions from AD2 partners (EbixCash, MakeMyTrip) were processed one by one. An Excel-based bulk-upload flow into the Core Banking path cut turnaround time by 80% — built at AU Small Finance Bank, Jaipur."
                 meta={["Core Banking", "REST APIs", "Excel ingestion", "RBI compliance", "2025"]}
             />
             <CaseSection heading="Problem">
@@ -54,7 +54,7 @@ export default function BulkUploadCase() {
             </CaseSection>
             <CaseSection heading="Result">
                 <p>
-                    Transaction turnaround time down <strong className="text-white">70%</strong> on the AD2
+                    Transaction turnaround time down <strong className="text-white">80%</strong> on the AD2
                     partner flow; compliance reporting near-zero manual effort with on-time RBI submissions;
                     proactive error flags instead of post-facto reversals.
                 </p>

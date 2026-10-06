@@ -80,7 +80,7 @@ const PROJECTS_DATA: Project[] = [
     {
         title: "Biometric Attendance System",
         one_liner: "Enterprise attendance on employees' own phones — dlib face match + GPS, auto-segregating genuine check-ins from spurious ones.",
-        outcome: "Shipped org-wide Oct 2022 – Mar 2023 · camera + GPS sensor fusion",
+        outcome: "Shipped org-wide Oct – Dec 2021 · camera + GPS sensor fusion",
         tech_stack: ["Python", "FastAPI", "dlib", ".NET", "Angular", "Docker"],
         live: "https://mlservices.vultech.in/docs",
         status: "Live",
