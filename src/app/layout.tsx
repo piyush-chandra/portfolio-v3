@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { SocialFAB } from "@/components/ui/SocialFAB";
 import { StickyCTA } from "@/components/ui/StickyCTA";
@@ -67,7 +66,6 @@ export default function RootLayout({
         </main>
         <SocialFAB />
         <StickyCTA />
-        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
