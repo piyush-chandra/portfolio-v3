@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, FileDown, Mail, Linkedin, Github } from "lucide-react";
-import { LatencyBadge } from "@/components/ui/LatencyBadge";
 
 const ROLES = ["backend engineer", "fintech systems builder", "weekend shipper", "AI/LLM tinkerer"];
 const STATS = [
@@ -121,7 +120,6 @@ export default function Home() {
                 <span className="inline-flex items-center gap-1.5">
                     <span className="text-neutral-600">●</span> Jaipur, India · <ISTClock />
                 </span>
-                <LatencyBadge />
             </div>
 
             {/* typing identity */}
