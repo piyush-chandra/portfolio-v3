@@ -12,6 +12,7 @@ export const metadata: Metadata = {
         title: "About · Piyush",
         description: "Skills, education, contact.",
         url: "/about",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     },
 };
 

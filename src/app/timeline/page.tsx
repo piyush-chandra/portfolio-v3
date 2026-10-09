@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         title: "Timeline · Piyush",
         description: "Life updates and milestones.",
         url: "/timeline",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     },
 };
 
