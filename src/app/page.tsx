@@ -111,10 +111,7 @@ export default function Home() {
             {/* status line — the "alive" bit */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-mono text-neutral-500">
                 <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-emerald-300">
-                    <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                    </span>
+                    <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                     open to new opportunities
                 </span>
                 <span className="inline-flex items-center gap-1.5">
