@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         title: "Books · Piyush",
         description: "Reading list and notes.",
         url: "/books",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     },
 };
 

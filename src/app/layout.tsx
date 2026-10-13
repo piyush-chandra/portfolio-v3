@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/layout/Header";
 import { SocialFAB } from "@/components/ui/SocialFAB";
 import { StickyCTA } from "@/components/ui/StickyCTA";
@@ -26,13 +25,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Piyush — Backend Engineer",
     description: "Scalable backends, fintech systems, weekend ships. Latest: Diabetes Risk Check.",
+    url: "./",
+    siteName: "Piyush — Backend Engineer",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Piyush — Backend Engineer",
     description: "Banking & fintech backends, weekend builds, AI/LLM tinkering.",
+    images: ["/opengraph-image.png"],
   },
+  alternates: { canonical: "./" },
 };
 
 export default function RootLayout({
@@ -67,7 +71,6 @@ export default function RootLayout({
         </main>
         <SocialFAB />
         <StickyCTA />
-        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

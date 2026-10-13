@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         title: "Diabetes Risk Check — case study",
         description: "5-expert ensemble, honest benchmarks, zero server inference.",
         url: "/projects/diabetes-risk-check",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
         type: "article",
     },
 };

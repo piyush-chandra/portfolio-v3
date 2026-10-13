@@ -8,3 +8,4 @@ export default function robots(): MetadataRoute.Robots {
         sitemap: `${BASE}/sitemap.xml`,
     };
 }
+export const dynamic = "force-static";

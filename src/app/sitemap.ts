@@ -12,3 +12,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ...POSTS.map((p) => ({ url: `${BASE}/writing/${p.slug}`, lastModified: new Date() })),
     ];
 }
+export const dynamic = "force-static";

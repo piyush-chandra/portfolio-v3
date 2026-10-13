@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         title: "Experience · Piyush",
         description: "Banking & fintech engineering: TAT cuts, SWIFT integrations, RBI automation.",
         url: "/experience",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     },
 };
 

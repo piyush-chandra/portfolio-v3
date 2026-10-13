@@ -9,6 +9,7 @@ export const metadata: Metadata = {
         title: "AD2 bulk upload · TAT −80%",
         description: "Excel bulk upload + RBI automation in production banking.",
         url: "/projects/ad2-bulk-upload",
+        images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
         type: "article",
     },
 };
