@@ -12,7 +12,7 @@ const TIMELINE_DATA = [
             {
                 title: "Ran 1st Half Marathon",
                 description: "Completed my first Half-Marathon run with a time of 2:09:50.",
-                link: "https://piyus.site/HM1" // Example link
+                link: "https://www.strava.com/athletes/piyush_chandra" // Example link
             },
             // Add more items for Feb 2026 here
         ]
